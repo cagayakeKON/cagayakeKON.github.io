@@ -3,5 +3,30 @@
   
   
   
+  <entry>
+    <title>Linux命令选项参数</title>
+    <link href="/2021/03/11/Linux%E5%91%BD%E4%BB%A4%E9%80%89%E9%A1%B9%E5%8F%82%E6%95%B0/"/>
+    <url>/2021/03/11/Linux%E5%91%BD%E4%BB%A4%E9%80%89%E9%A1%B9%E5%8F%82%E6%95%B0/</url>
+    
+    <content type="html"><![CDATA[<p>初学的时候总是对–和-传参不是很明白，又没有学习Shell编程，之后总算看到了相关解释，所以在这里记录一下</p><h2 id="Linux命令的基本格式"><a href="#Linux命令的基本格式" class="headerlink" title="Linux命令的基本格式"></a>Linux命令的基本格式</h2><pre><code>Linux命令的基本格式是command [options] [arguments]，依次分别为命令 选项 参数  </code></pre><ol><li>option 选项:选项又分为短选项-和长选项–<ul><li>短选项 - <blockquote><p>短选项比如-g -l，是单个字母，选项之间有些可以合并，比如ls -lh，有些短选项为BSD分割，可以不带-，有些短选项了需要带自己的参数，例如-L 512M</p></blockquote></li><li>长选项 – 长选项<blockquote><p>长选项为整个单词，不能组合，传参数时需要带= 列如–size=1G</p></blockquote></li></ul></li><li>arguments 参数 参数时命令执行的对象 比如 cat file</li></ol><p>参考 <a href="https://https//m.linuxidc.com/Linux/2018-07/153121.htm">https://https://m.linuxidc.com/Linux/2018-07/153121.htm</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Command</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
   
 </search>
