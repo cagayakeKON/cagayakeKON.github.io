@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="ja" data-default-color-scheme=&#34;auto&#34;>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
 
 
 
@@ -73,7 +73,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
-                ホーム
+                首页
               </a>
             </li>
           
@@ -85,7 +85,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                アーカイブ
+                归档
               </a>
             </li>
           
@@ -97,7 +97,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
-                カテゴリー
+                分类
               </a>
             </li>
           
@@ -109,7 +109,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                タグ
+                标签
               </a>
             </li>
           
@@ -121,7 +121,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                本ブログ情報　
+                关于
               </a>
             </li>
           
@@ -179,6 +179,60 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/12/JVM%E4%B8%8E%E5%80%BC%E4%BC%A0%E9%80%92,%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92/">java的内存分配与传参问题</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/12/JVM%E4%B8%8E%E5%80%BC%E4%BC%A0%E9%80%92,%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92/">
+          
+          
+            
+          
+          关于java的值传递和引用传递我一直没搞懂，直到今天彻底去理解了一下java运行时的内存分配以及看了各种文章之后才彻底弄懂  
+java运行时的执行过程如果有以下代码
+1234567891011121314class A&#123;    public void sayHello(B b)&#123;        System.out.print(b.hello);    &#125;    p
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-12 23:13" pubdate>
+              2021-03-12
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/java/">java</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/java/">java</a>
+            
+              <a href="/tags/jvm/">jvm</a>
+            
+              <a href="/tags/java%E5%9F%BA%E7%A1%80/">java基础</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
 
   <div class="row mx-auto index-card">
     
@@ -257,7 +311,7 @@ option 选项:选项又分为短选项-和长选项–
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">検索</h4>
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -266,7 +320,7 @@ option 选项:选项又分为短选项-和长选项–
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
           <label data-error="x" data-success="v"
-                 for="local-search-input">キーワード</label>
+                 for="local-search-input">关键词</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>

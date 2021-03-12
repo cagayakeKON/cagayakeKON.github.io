@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>java的内存分配与传参问题</title>
+    <link href="/2021/03/12/JVM%E4%B8%8E%E5%80%BC%E4%BC%A0%E9%80%92,%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92/"/>
+    <url>/2021/03/12/JVM%E4%B8%8E%E5%80%BC%E4%BC%A0%E9%80%92,%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92/</url>
+    
+    <content type="html"><![CDATA[<p>关于java的值传递和引用传递我一直没搞懂，直到今天彻底去理解了一下java运行时的内存分配以及看了各种文章之后才彻底弄懂  </p><h2 id="java运行时的执行过程"><a href="#java运行时的执行过程" class="headerlink" title="java运行时的执行过程"></a>java运行时的执行过程</h2><p>如果有以下代码</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span></span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sayHello</span><span class="hljs-params">(B b)</span></span>&#123;<br>        System.out.print(b.hello);<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;<br>        A a = <span class="hljs-keyword">new</span> A();<br>        B b = <span class="hljs-keyword">new</span> B();<br>        a.sayHello(b);<br>    &#125;<br>&#125;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">B</span></span>&#123;<br>    <span class="hljs-keyword">public</span> String hello =<span class="hljs-string">&quot;hello&quot;</span>;<br>&#125;<br></code></pre></td></tr></table></figure><p>那么执行过程如下</p><ol><li>将main方法压到栈底</li><li>执行第一行语句，new一个A类在堆区，并且a指向堆区的A类</li><li>new一个B类在堆区，并且b指向堆区的B类</li><li>通过指针最终会在方法区找到A类中的sayHello方法，并将将sayHello方法压栈</li><li>将b的地址传入进去，并在该栈帧里对传入的b地址近行拷贝</li><li>通过传入并拷贝后的地址获取B中sayHello的值<br><img src="/images/java%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.png" alt="java执行过程"></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>java</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>java</tag>
+      
+      <tag>jvm</tag>
+      
+      <tag>java基础</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Linux命令选项参数</title>
     <link href="/2021/03/11/Linux%E5%91%BD%E4%BB%A4%E9%80%89%E9%A1%B9%E5%8F%82%E6%95%B0/"/>
     <url>/2021/03/11/Linux%E5%91%BD%E4%BB%A4%E9%80%89%E9%A1%B9%E5%8F%82%E6%95%B0/</url>
