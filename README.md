@@ -1,5 +1,5 @@
 # blog.github.io
-'''vb
+```vb
 Sub getExcelFile(sFolderPath As String)
 On Error Resume Next
 Dim f As String
@@ -19,4 +19,4 @@ file(1) = sFolderPath & "\"
     Loop
  
 End Sub
-'''
+```
